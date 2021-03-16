@@ -40,11 +40,12 @@
     <div class="newsletter-subscribe">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Drop Image for testing the backend.</h2>
+                <h2 class="text-center">Drop Image URL for testing the backend.</h2>
                 <p class="text-center">The text on image will be passed on to the OCR module which will then return a response with a body containing the text which will be then transcribed to the language of the choice of the user.</p>
             </div>
-            <form class="form-inline" method="post">
-                <div class="form-group d-md-flex"><input type="file"></div>
+            <form class="form-inline" method="GET" action="https://api.ocr.space/parse/imageurl/" target="_blank">
+                <input type = "hidden" name = "apikey" value = "3300892a7788957" />
+                <div class="form-group d-md-flex"><input class="form-control" name="url" type="url" placeholder="Enter URL of the Image here"></div>
                 <div class="form-group d-md-flex"><button class="btn btn-secondary" type="submit" style="background-color: #8142ff;">SUBMIT</button></div>
             </form>
         </div>
@@ -52,7 +53,7 @@
     <div class="article-list">
         <div class="container">
             <div class="intro">
-                <p class="text-center">If you don't have an image to test download one the the three test images below.<br></p>
+                <p class="text-center">If you don't have an image to test copy link of one of the three test images below.<br></p>
             </div>
             <div class="row articles">
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/Test1.jpg"></a>
@@ -79,6 +80,7 @@
             <p class="copyright">Sudoeye © 2021</p>
         </footer>
     </div>
+    <script src="services/demoHandler.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-animation.js"></script>
